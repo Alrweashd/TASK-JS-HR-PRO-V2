@@ -15,8 +15,14 @@ class Employee {
     console.log(`${this.name}:${this.name}`);
   }
 
-  logManagerInfo(workingYears) {
-    return;
+  logManagerInfo() {
+    let year = new Date().getFullYear();
+    let working = year - this.yearJoined;
+    console(`${this.name} since ${working} Bouns % ${this.bonusPercentage}`);
+  }
+
+  getWorkingYears(year) {
+    return year - this.yearJoined;
   }
 }
 
